@@ -1,2 +1,4 @@
-# example-apps
-editor-framework app examples
+## Editor Framework App Examples
+
+ - close-to-tray
+
