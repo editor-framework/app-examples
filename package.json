@@ -1,0 +1,10 @@
+{
+  "name": "example-apps",
+  "version": "1.0.0",
+  "description": "Editor Framework App Examples",
+  "author": "Johnny Wu",
+  "dependencies": {
+    "electron-prebuilt": "0.x",
+    "editor-Framework": "0.x"
+  }
+}
