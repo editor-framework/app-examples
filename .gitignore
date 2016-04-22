@@ -26,3 +26,4 @@ profile
 # project files
 node_modules/
 bower_components/
+.settings/
