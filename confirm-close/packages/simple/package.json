@@ -1,0 +1,20 @@
+{
+  "name": "simple",
+  "version": "1.0.0",
+  "description": "Simple Package",
+  "main": "main.js",
+  "panel.01": {
+    "main": "panel/panel.js",
+    "type": "dockable",
+    "title": "Simple 01",
+    "width": 400,
+    "height": 300
+  },
+  "panel.02": {
+    "main": "panel/panel.js",
+    "type": "dockable",
+    "title": "Simple 02",
+    "width": 400,
+    "height": 300
+  }
+}

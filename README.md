@@ -2,4 +2,5 @@
 
  - close-to-tray
  - custom-command
+ - custom-layout
 

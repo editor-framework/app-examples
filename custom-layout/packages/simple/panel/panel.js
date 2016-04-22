@@ -10,4 +10,7 @@ Editor.Panel.extend({
   template: `
     <h1>This is a simple panel</h1>
   `,
+
+  listeners: {
+  },
 });
