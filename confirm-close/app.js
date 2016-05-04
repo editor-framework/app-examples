@@ -40,9 +40,7 @@ Editor.App.extend({
     if ( Editor.argv.showDevtools ) {
       // NOTE: open dev-tools before did-finish-load will make it insert an unused <style> in page-level
       mainWin.nativeWin.webContents.once('did-finish-load', function () {
-        mainWin.openDevTools({
-          detach: true
-        });
+        mainWin.openDevTools();
       });
     }
     mainWin.focus();
