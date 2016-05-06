@@ -1,0 +1,26 @@
+{
+  "name": "editor-framework-demo",
+  "productName": "Editor Framework Demo",
+  "description": "An editor-framework demo.",
+  "version": "1.0.0",
+  "author": "Johnny Wu",
+  "main": "app.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "check-dependencies": "0.11.0",
+    "gulp": "3.9.0",
+    "gulp-sequence": "0.4.4"
+  },
+  "hosts": {
+    "fireball-packages/package-examples": "master"
+  },
+  "packages": {
+    "fireball-packages/console": "master",
+    "fireball-packages/ipc-debugger": "master",
+    "fireball-packages/package-manager": "master",
+    "fireball-packages/tester": "master",
+    "fireball-packages/ui-kit": "master",
+    "fireball-packages/ui-widgets": "master"
+  }
+}
