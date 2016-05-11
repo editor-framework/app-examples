@@ -21,6 +21,6 @@
     "fireball-packages/package-manager": "master",
     "fireball-packages/tester": "master",
     "fireball-packages/ui-kit": "master",
-    "fireball-packages/ui-widgets": "master"
+    "fireball-packages/ui-kit-preview": "master"
   }
 }
