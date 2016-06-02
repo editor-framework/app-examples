@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Simple Panel Window</title>
+    <meta charset="utf-8">
+    <style>
+      body {
+        margin: 10px;
+      }
+
+      h1 {
+        color: #f90
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>A simple panel window</h1>
+    <button id="btn">Send Message</button>
+
+    <script>
+      let btn = document.getElementById('btn');
+      btn.addEventListener('click', () => {
+        Editor.Ipc.sendToMain('simple:say-hello', 'Hello, this is simple panel');
+      });
+    </script>
+  </body>
+</html>

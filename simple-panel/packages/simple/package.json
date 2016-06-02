@@ -1,0 +1,18 @@
+{
+  "name": "simple",
+  "version": "1.0.0",
+  "description": "Simple Package",
+  "main": "main.js",
+  "main-menu": {
+    "Panel/Simple Panel": {
+      "message": "simple:open"
+    }
+  },
+  "panel": {
+    "main": "panel/index.html",
+    "type": "simple",
+    "title": "Simple Panel",
+    "width": 400,
+    "height": 300
+  }
+}
