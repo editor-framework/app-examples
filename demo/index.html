@@ -30,13 +30,11 @@
     <h2>Run demos from <span>Main Menu/Examples</span></h2>
     <ui-main-dock class="flex-1"></ui-main-dock>
     <script>
-      const DomUtils = Editor.UI.DomUtils;
-
       Pace.once( 'hide', function () {
-        DomUtils.removeLoadingMask();
+        Editor.UI.removeLoadingMask();
       });
 
-      DomUtils.addLoadingMask({
+      Editor.UI.addLoadingMask({
         background: '#333',
       });
     </script>
