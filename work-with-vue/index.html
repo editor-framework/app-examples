@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Main Window</title>
+    <meta charset="utf-8">
+    <style>
+      body {
+        margin: 10px;
+      }
+
+      ui-button {
+        margin-bottom: 5px;
+        width: 240px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="layout vertical center-center">
+      <ui-button id="simple">Simple Panel</ui-button>
+      <ui-button id="style">Work with style</ui-button>
+    </div>
+
+    <script>
+      'use strict';
+
+      [
+        'simple',
+        'style'
+      ].forEach(name => {
+        document.getElementById(name).addEventListener('confirm', () => {
+          Editor.Panel.open(`vue-panels.${name}`);
+        });
+      });
+    </script>
+  </body>
+</html>

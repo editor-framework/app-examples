@@ -1,0 +1,20 @@
+{
+  "name": "vue-panels",
+  "version": "1.0.0",
+  "description": "Vue Panels",
+  "main": "main.js",
+  "panel.simple": {
+    "main": "panel/simple.js",
+    "type": "dockable",
+    "title": "Simple",
+    "width": 400,
+    "height": 300
+  },
+  "panel.style": {
+    "main": "panel/style.js",
+    "type": "dockable",
+    "title": "Style",
+    "width": 400,
+    "height": 300
+  }
+}
