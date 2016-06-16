@@ -1,0 +1,22 @@
+{
+  "name": "inspector",
+  "version": "0.0.1",
+  "description": "Builtin inspector.",
+  "author": "Johnny Wu",
+  "main": "main.js",
+  "main-menu": {
+    "Panel/Inspector": {
+      "message": "inspector:open"
+    }
+  },
+  "panel": {
+    "main": "panel/panel.js",
+    "type": "dockable",
+    "title": "Inspector",
+    "width": 300,
+    "height": 600,
+    "min-width": 200,
+    "min-height": 200,
+    "shortcuts": {}
+  }
+}

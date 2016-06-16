@@ -16,5 +16,12 @@
     "title": "Style",
     "width": 400,
     "height": 300
+  },
+  "panel.builtin-ui": {
+    "main": "panel/builtin-ui.js",
+    "type": "dockable",
+    "title": "Style",
+    "width": 400,
+    "height": 300
   }
 }

@@ -1,0 +1,24 @@
+{
+  "name": "scene",
+  "version": "0.0.1",
+  "description": "Builtin scene.",
+  "author": "Johnny Wu",
+  "main": "main.js",
+  "main-menu": {
+    "Panel/Scene": {
+      "message": "scene:open"
+    }
+  },
+  "panel": {
+    "main": "panel/panel.js",
+    "type": "dockable",
+    "title": "Scene",
+    "width": 800,
+    "height": 600,
+    "min-width": 200,
+    "min-height": 200,
+    "shortcuts": {}
+  },
+  "dependencies": {
+  }
+}

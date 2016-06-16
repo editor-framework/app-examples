@@ -6,18 +6,6 @@ Editor.Panel.extend({
       margin: 10px;
     }
 
-    input {
-      outline: none;
-      background: #333;
-      border: 1px solid #555;
-      color: #f90;
-      padding: 5px;
-    }
-
-    input:focus {
-      border: 1px solid #f90;
-    }
-
     p span {
       font-weight: bold;
       color: #09f;
@@ -25,18 +13,26 @@ Editor.Panel.extend({
   `,
 
   template: `
-    <h2>A Simple Vue Panel</h2>
+    <h2>Work with builtin ui</h2>
 
-    <input v-model="message">
+    <ui-prop name="foo" type="string" :value="message" v-on:change="onChange"></ui-prop>
+    <ui-prop name="bar" type="string" :value="message" readonly></ui-prop>
     <p>Input Value = <span>{{message}}</span></p>
   `,
 
   ready () {
     new window.Vue({
       el: this.shadowRoot,
+
       data: {
         message: 'Hello World',
       },
+
+      methods: {
+        onChange ( event ) {
+          this.message = event.detail.value;
+        }
+      }
     });
   },
 });

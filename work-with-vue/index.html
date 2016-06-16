@@ -18,6 +18,7 @@
     <div class="layout vertical center-center">
       <ui-button id="simple">Simple Panel</ui-button>
       <ui-button id="style">Work with style</ui-button>
+      <ui-button id="builtin-ui">Work with builtin ui</ui-button>
     </div>
 
     <script>
@@ -25,7 +26,8 @@
 
       [
         'simple',
-        'style'
+        'style',
+        'builtin-ui',
       ].forEach(name => {
         document.getElementById(name).addEventListener('confirm', () => {
           Editor.Panel.open(`vue-panels.${name}`);
