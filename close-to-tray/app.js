@@ -31,9 +31,7 @@ Editor.App.extend({
               {
                 label: 'Quit',
                 accelerator: 'CmdOrCtrl+Q',
-                click: () => {
-                  Editor.Window.main.forceClose();
-                }
+                role: 'quit'
               },
             ]
           },
