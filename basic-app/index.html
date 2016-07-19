@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title>Welcome to Editor Framework!</title>
+  <meta charset="utf-8">
+
+  <style>
+    body {
+      margin: 10px;
+    }
+
+    h2 span {
+      color: #090;
+    }
+  </style>
+</head>
+
+<body class="layout vertical">
+
+<h1>Welcome to Editor-Framework!</h1>
+
+<h3><em>This is a basic demo of an Editor-Framework application</em></h3>
+
+<pre>
+  Application path:  <script>document.write(Editor.appPath)</script>
+  NodeJS version:    <script>document.write(process.versions.node)</script>
+  Chromium version:  <script>document.write(process.versions.chrome)</script>
+  Electron version:  <script>document.write(process.versions.electron)</script>
+</pre>
+
+<script>
+
+  Editor.success("index.html: \tWelcome to Editor Framework!")
+  Editor.log("index.html: \tApplication Path: ",  Editor.appPath)
+  Editor.log("index.html: \tNodeJS version: ",    process.versions.node)
+  Editor.log("index.html: \tChromium version: ",  process.versions.chrome)
+  Editor.log("index.html: \tElectron version: ",  process.versions.electron)
+</script>
+
+</body>
+</html>
