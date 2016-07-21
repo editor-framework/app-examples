@@ -1,0 +1,11 @@
+{
+  "name": "simple-widget",
+  "version": "1.0.0",
+  "description": "Simple Package",
+  "main": "main.js",
+  "main-menu": {
+    "Examples/Run Command": {
+      "message": "simple-widget:say-hi"
+    }
+  }
+}
