@@ -3,5 +3,5 @@
   "version": "0.0.1",
   "description": "Perhaps the simplest possible Editor-Framework application",
   "dependencies": {},
-  "main": "main.js"
+  "main": "app.js"
 }
