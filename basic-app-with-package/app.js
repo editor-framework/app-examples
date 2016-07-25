@@ -6,10 +6,10 @@ Editor.App.extend({
 
   /**
    * init is called once Editor Framework has completed its internal initialization.
-   * Here, you may want to define any application-level configuration or behavior. 
-   * 
-   * @param opts An object representing the command line options used to start this Application 
-   * @param callback function that signals the parent process that initialization is complete. 
+   * Here, you may want to define any application-level configuration or behavior.
+   *
+   * @param opts An object representing the command line options used to start this Application
+   * @param callback function that signals the parent process that initialization is complete.
    *    You'll want to call manually this within your `init` function once you're ready for the application
    *    to run
    */
@@ -21,8 +21,8 @@ Editor.App.extend({
       ],
     });
 
-    
-    Editor.success("main.js: call to init() completed successfully")
+
+    Editor.success('main.js: call to init() completed successfully');
     // You'll need to call this directly to signal Editor-Framework that you're ready to run the application
     callback();
   },
@@ -44,7 +44,7 @@ Editor.App.extend({
       show: false,
       resizable: true,
     });
-    
+
     // Tell Editor that that is our root window.
     Editor.Window.main = mainWin;
 
@@ -64,9 +64,9 @@ Editor.App.extend({
         mainWin.openDevTools();
       });
     }
-    
+
     mainWin.focus();
 
-    Editor.success("main.js: call to run() completed successfully")
+    Editor.success('main.js: call to run() completed successfully');
   },
 });

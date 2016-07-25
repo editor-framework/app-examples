@@ -11,10 +11,14 @@
     h2 span {
       color: #090;
     }
+
+    #btn {
+      margin-top: 20px;
+    }
   </style>
 </head>
 
-<body class="layout vertical">
+<body>
 
 <h1>A basic app with a package</h1>
 
@@ -27,11 +31,11 @@
   Electron version:  <script>document.write(process.versions.electron)</script>
 </pre>
 
-<button id="btn">Send IPC event to main process</button>
+<ui-button id="btn">Send IPC event to main process</ui-button>
 
 <script>
   let btn = document.getElementById('btn');
-  btn.addEventListener('click', () => {
+  btn.addEventListener('confirm', () => {
     Editor.Ipc.sendToAll('simple-widget:notify-click', 'CLICK!');
     Editor.log("simple-widget:notify-click event dispatched from index.html")
   });

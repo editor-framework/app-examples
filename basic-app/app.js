@@ -27,7 +27,8 @@ Editor.App.extend({
     });
 
 
-    Editor.success("main.js: call to init() completed successfully")
+    Editor.success('main.js: call to init() completed successfully');
+
     // You'll need to call this directly to signal Editor-Framework that you're ready to run the application
     callback();
   },
@@ -72,6 +73,6 @@ Editor.App.extend({
 
     mainWin.focus();
 
-    Editor.success("main.js: call to run() completed successfully")
+    Editor.success('main.js: call to run() completed successfully');
   },
 });
