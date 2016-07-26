@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Main Window</title>
+    <meta charset="utf-8">
+
+    <style>
+      body {
+        margin: 3px;
+      }
+
+      .top-bar {
+        margin: auto;
+        margin-bottom: 5px;
+      }
+
+      #mainDock {
+        position: relative;
+      }
+    </style>
+  </head>
+
+  <body class="layout vertical">
+    <div class="top-bar layout horizontal">
+       <ui-button>Play</ui-button>
+       <ui-button>Stop</ui-button>
+       <ui-button>Pause</ui-button>
+    </div>
+
+    <ui-main-dock class="flex-1"></ui-main-dock>
+  </body>
+</html>

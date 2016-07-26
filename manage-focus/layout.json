@@ -1,0 +1,25 @@
+{
+  "type": "dock",
+  "no-collpase": true,
+  "row": true,
+  "docks": [
+    {
+      "active": 0,
+      "type": "panel",
+      "width": 300,
+      "min-width": 240,
+      "panels": [
+        "simple.01"
+      ]
+    },
+    {
+      "active": 0,
+      "type": "panel",
+      "width": 300,
+      "min-width": 240,
+      "panels": [
+        "simple.02"
+      ]
+    }
+  ]
+}
