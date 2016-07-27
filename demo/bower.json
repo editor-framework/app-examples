@@ -19,7 +19,8 @@
     "iron-input": "PolymerElements/iron-input#^1.0.0",
     "iron-selector": "PolymerElements/iron-selector#^1.0.0",
     "pace": "1.0.2",
-    "polymer": "Polymer/polymer#^1.5.0"
+    "polymer": "Polymer/polymer#^1.6.0",
+    "vue": "1.x"
   },
   "devDependencies": {}
 }
