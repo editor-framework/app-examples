@@ -1,5 +1,5 @@
 {
-  "name": "your-app-name",
+  "name": "basic-app-with-package",
   "version": "0.0.1",
   "description": "Basic app with a package for basic IPC demonstration",
   "dependencies": {},
