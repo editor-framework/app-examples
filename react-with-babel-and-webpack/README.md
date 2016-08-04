@@ -1,6 +1,6 @@
 ## Instructions
 
-*This *
+*This demo app is a work in progress*
 
 1. Run both `npm install` and `bower install` in  *this* directory and also both `react-wrapper` and `ui-kit-preview` packages 
 1. Navigate to the react-wrapper package, and start the webpack-hot server via `npm run hot-server`. This will start webpack
