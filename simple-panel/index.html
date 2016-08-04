@@ -16,6 +16,23 @@
 
   <body class="layout vertical">
     <h1>Main Window</h1>
-    <h2>Open the simple panel through <span>Main Menu / Panel / Simple Panel</span></h2>
+    <h2>Open the simple panel through <span>Main Menu / Panel</span> or Click the button below</h2>
+
+    <div class="layout horizontal">
+      <ui-button id="btn1">Open Simple Panel</ui-button>
+      <ui-button id="btn2" >Open Dockable Panel</ui-button>
+      <ui-button id="btn3" >Open Dockable Panel (No Shadow DOM)</ui-button>
+    </div>
   </body>
+
+  <script>
+    let btn1 = document.getElementById('btn1');
+    btn1.addEventListener('confirm', () => { Editor.Panel.open('simple'); });
+
+    let btn2 = document.getElementById('btn2');
+    btn2.addEventListener('confirm', () => { Editor.Panel.open('simple-02'); });
+
+    let btn3 = document.getElementById('btn3');
+    btn3.addEventListener('confirm', () => { Editor.Panel.open('simple-03'); });
+  </script>
 </html>

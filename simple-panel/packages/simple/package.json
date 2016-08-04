@@ -6,12 +6,31 @@
   "main-menu": {
     "Panel/Simple Panel": {
       "message": "simple:open"
+    },
+    "Panel/Dockable Panel": {
+      "message": "simple:open2"
+    },
+    "Panel/Dockable Panel (No Shadow DOM)": {
+      "message": "simple:open3"
     }
   },
   "panel": {
     "main": "panel/index.html",
     "type": "simple",
     "title": "Simple Panel",
+    "width": 400,
+    "height": 300
+  },
+  "panel-02": {
+    "main": "panel-02/panel.js",
+    "title": "Dockable Panel",
+    "width": 400,
+    "height": 300
+  },
+  "panel-03": {
+    "main": "panel-02/panel.js",
+    "shadow-dom": false,
+    "title": "Dockable Panel (No Shadow DOM)",
     "width": 400,
     "height": 300
   }

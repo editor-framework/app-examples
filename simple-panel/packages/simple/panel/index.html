@@ -14,12 +14,12 @@
   </head>
 
   <body>
-    <h1>A simple panel window</h1>
-    <button id="btn">Send Message</button>
+    <h1>A simple panel</h1>
+    <ui-button id="btn">Send Message</ui-button>
 
     <script>
       let btn = document.getElementById('btn');
-      btn.addEventListener('click', () => {
+      btn.addEventListener('confirm', () => {
         Editor.Ipc.sendToMain('simple:say-hello', 'Hello, this is simple panel');
       });
     </script>
