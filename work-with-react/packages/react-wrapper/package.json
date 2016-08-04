@@ -1,0 +1,57 @@
+{
+  "name": "react-wrapper",
+  "version": "0.0.1",
+  "description": "A placeholder panel for layout design",
+  "author": "Firebox Technology",
+  "main": "main.js",
+  "main-menu": {
+    "Examples/ReactWrapper": {
+      "message": "react-wrapper:open"
+    }
+  },
+  "scripts": {
+    "hot-server": "node -r babel-register server.js"
+  },
+  "panel": {
+    "main": "panel/panel.js",
+    "type": "dockable",
+    "title": "React Wrapper",
+    "icon": "panel/icon.png",
+    "messages": [],
+    "height": 500,
+    "profiles": {
+      "local": {
+        "scrollTop": 0,
+        "select": "button"
+      }
+    }
+  },
+  "dependencies": {
+    "react": "15.3.0",
+    "react-dom": "15.3.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.11.4",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-dev-expression": "^0.2.1",
+    "babel-plugin-transform-remove-console": "^6.8.0",
+    "babel-plugin-transform-remove-debugger": "^6.8.0",
+    "babel-plugin-transform-react-jsx": "^6.8.0",
+    "babel-plugin-webpack-loaders": "^0.7.0",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-react-optimize": "^1.0.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.9.0",
+    "express": "^4.14.0",
+    "source-map-support": "^0.4.2",
+    "webpack": "^1.13.1",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.12.1",
+    "webpack-merge": "^0.14.0"
+  }
+}
