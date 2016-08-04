@@ -11,7 +11,7 @@ let baseConfig = {
     ]
   },
   output:    {
-    path:          './panel/dist',
+    path:          require("path").resolve('./panel/dist'),
     filename:      'bundle.js',
     libraryTarget: 'commonjs2'
   },
