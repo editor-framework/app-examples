@@ -1,0 +1,21 @@
+{
+  "docks": [
+    {
+      "docks": [
+        {
+          "active": 0,
+          "panels": [
+            "react-wrapper",
+            "ui-kit-preview"
+          ],
+          "type": "panel"
+        }
+      ],
+      "row": true,
+      "type": "dock"
+    }
+  ],
+  "no-collapse": true,
+  "row": false,
+  "type": "dock"
+}

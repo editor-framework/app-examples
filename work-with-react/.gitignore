@@ -1,0 +1,37 @@
+# mac-osx files
+.DS_store
+profile
+
+# visual-studio files
+*.ncb
+*.sln
+*.suo
+*.vcproj.*.user
+*.pdb
+*.idb
+*.csproj
+*.csproj.user
+
+# exvim files
+*.err
+*.exvim
+.exvim.*/
+
+# webstorm
+.idea
+
+# log files
+*.log
+
+# project files
+api/
+apidocs/
+bin/
+package-examples/
+node_modules/
+bower_components/
+
+packages/react-wrapper/dist
+
+# test files
+.settings/
