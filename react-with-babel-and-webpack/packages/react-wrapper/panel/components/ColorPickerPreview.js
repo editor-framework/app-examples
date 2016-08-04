@@ -1,0 +1,21 @@
+let React     = require('react')
+let Component = React.Component
+
+class ColorPickerPreview extends Component {
+
+  render() {
+    return (
+      <div class="section">
+        <h3>Standard checkbox</h3>
+        <div class="group g-01">
+          <ui-color-picker value="#rgba(255,128,0,0.8)"></ui-color-picker>
+        </div>
+
+        <div class="text"></div>
+        <div id="event">event: ---</div>
+      </div>
+    )
+  }
+}
+
+module.exports = ColorPickerPreview
