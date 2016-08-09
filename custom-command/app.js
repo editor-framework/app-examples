@@ -28,6 +28,12 @@ Editor.App.extend({
   },
 
   init ( opts, cb ) {
+    // EXAMPLE: projectPath
+    // let projectPath;
+    // if ( opts.args.length > 0 ) {
+    //   projectPath = opts.args[0];
+    // }
+
     if ( opts['say-hello'] ) {
       console.log('Hello everyone!');
     }
