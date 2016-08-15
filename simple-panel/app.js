@@ -6,7 +6,7 @@ Editor.App.extend({
   init ( opts, cb ) {
     Editor.init({
       'package-search-path': [
-        Editor.url('app://packages/'),
+        'app://packages/',
       ],
     });
 

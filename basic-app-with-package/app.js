@@ -17,7 +17,7 @@ Editor.App.extend({
     Editor.init({
       // An object defining application-level configuration options for initialization will go here
       'package-search-path': [
-        Editor.url('app://packages/'),
+        'app://packages/',
       ],
     });
 

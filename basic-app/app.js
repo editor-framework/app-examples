@@ -21,7 +21,7 @@ Editor.App.extend({
   init (opts, callback) {
     Editor.init({
       'package-search-path': [
-        Editor.url('app://package-doesnt-exist/')
+        'app://package-doesnt-exist/'
       ]
       // An object defining application-level configuration options for initialization will go here  
     });

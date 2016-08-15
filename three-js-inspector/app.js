@@ -5,10 +5,10 @@ const Editor = require('../../index');
 Editor.App.extend({
   init ( opts, cb ) {
     Editor.init({
-      layout: Editor.url('app://layout.json'),
+      layout: 'app://layout.json',
       'panel-window': 'app://window.html',
       'package-search-path': [
-        Editor.url('app://packages/'),
+        'app://packages/',
       ],
     });
 

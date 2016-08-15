@@ -7,7 +7,7 @@ Editor.App.extend({
     Editor.init({
       'panel-window': 'app://window.html',
       'package-search-path': [
-        Editor.url('app://packages/'),
+        'app://packages/',
       ],
     });
 
