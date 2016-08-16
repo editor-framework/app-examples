@@ -1,0 +1,119 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <style>
+      body {
+        margin: 5px;
+      }
+
+      h1 {
+        color: #f90;
+        margin: auto;
+      }
+
+      .box {
+        border: 1px solid #666;
+        flex-wrap: wrap;
+      }
+
+      div.item {
+        box-sizing: border-box;
+        cursor: pointer;
+        font-size: 12px;
+        margin: 2px;
+        background: #474747;
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 50px;
+      }
+
+      div.item.hovering {
+        background: #09f;
+        color: #333;
+      }
+
+      div.item.selected {
+        background: #f90;
+        color: #333;
+      }
+    </style>
+  </head>
+
+  <body class="layout vertical">
+    <h1>Window 2</h1>
+    <div class="flex-1 box"></div>
+
+    <script>
+      'use strict';
+
+      const list = [
+        'extrajudicially',
+        'duse',
+        'appleton',
+        'aborning',
+        'evacuee',
+        'impecunious',
+        'overrude',
+        'subrange',
+        'hamlet',
+        'subtranslucency',
+      ];
+
+      let rootEL = document.querySelector('.box');
+      let index = 0;
+
+      list.forEach(item => {
+        let el = document.createElement('div');
+        el.classList = ['item']
+        el.innerText = item;
+        el.index = index;
+        el.addEventListener('mouseenter', () => {
+          Editor.Selection.hover( 'normal', el.index );
+        });
+        el.addEventListener('mouseleave', () => {
+          Editor.Selection.hover( 'normal', null );
+        });
+        el.addEventListener('mousedown', event => {
+          event.stopPropagation();
+
+          if (event.metaKey || event.ctrlKey) {
+            let selected = el.classList.contains('selected');
+            if ( selected ) {
+              Editor.Selection.unselect('normal', `${el.index}`, true);
+            } else {
+              Editor.Selection.select('normal', `${el.index}`, false, true);
+            }
+          } else {
+            Editor.Selection.select('normal', `${el.index}`, true, true);
+          }
+        });
+
+        rootEL.appendChild(el);
+        ++index;
+      });
+
+      let ipc = new Editor.IpcListener();
+
+      ipc.on('selection:hoverin', ( event, type, index ) => {
+        rootEL.children[index].classList.add('hovering');
+      });
+      ipc.on('selection:hoverout', ( event, type, index ) => {
+        rootEL.children[index].classList.remove('hovering');
+      });
+      ipc.on('selection:changed', ( event, type ) => {
+        for ( let i = 0; i < rootEL.children.length; ++i ) {
+          rootEL.children[i].classList.remove('selected');
+        }
+
+        let selection = Editor.Selection.curSelection(type);
+        selection.forEach(id => {
+          rootEL.children[id].classList.add('selected');
+        });
+      });
+    </script>
+  </body>
+</html>

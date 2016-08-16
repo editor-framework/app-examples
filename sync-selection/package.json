@@ -1,0 +1,7 @@
+{
+  "name": "sync-selection",
+  "version": "0.0.1",
+  "description": "Use Editor.Selection module for syncing selection among several windows",
+  "dependencies": {},
+  "main": "app.js"
+}

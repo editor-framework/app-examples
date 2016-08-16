@@ -1,0 +1,7 @@
+{
+  "name": "run-command",
+  "version": "0.0.1",
+  "description": "Run external command",
+  "dependencies": {},
+  "main": "app.js"
+}

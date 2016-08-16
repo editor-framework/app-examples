@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <style>
+      body {
+        margin: 5px;
+      }
+
+      ui-button {
+        width: 120px;
+        margin: auto;
+        margin-bottom: 10px;
+      }
+
+      pre {
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        background: #171717;
+        color: #090;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body class="layout vertical">
+    <ui-prop id="cmd" name="Command" type="string"></ui-prop>
+    <ui-prop id="cwd" name="Working Directory" type="string"></ui-prop>
+    <pre id="pre" class="flex-1"></pre>
+    <ui-button id="btn" class="green">Run</ui-button>
+
+    <script>
+      'use strict';
+
+      let cmdEL = document.querySelector('#cmd');
+      let cwdEL = document.querySelector('#cwd');
+      let btnEL = document.querySelector('#btn');
+      let preEL = document.querySelector('#pre');
+
+      cmdEL.value = 'npm --help';
+      cwdEL.value = Editor.url('app://');
+
+      btnEL.addEventListener('confirm', () => {
+        preEL.innerText = 'Running...';
+
+        Editor.Ipc.sendToMain('run-command:exec', {
+          cmd: cmdEL.value,
+          cwd: cwdEL.value
+        }, (event, log) => {
+          preEL.innerText = log;
+        }, -1);
+      });
+    </script>
+  </body>
+</html>

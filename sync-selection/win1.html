@@ -1,0 +1,215 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <style>
+      body {
+        margin: 5px;
+      }
+
+      h1 {
+        color: #f90;
+        margin: auto;
+      }
+
+      .box {
+        border: 1px solid #666;
+        position: relative;
+      }
+
+      div.item {
+        cursor: pointer;
+        font-size: 20px;
+        padding: 10px 15px;
+        margin: 2px;
+        background: #474747;
+      }
+
+      div.item.hovering {
+        background: #09f;
+        color: #333;
+      }
+
+      div.item.selected {
+        background: #f90;
+        color: #333;
+      }
+
+      svg {
+        border: 2px solid black;
+        background: #333;
+        shape-rendering: crispEdges;
+        width: auto;
+        height: auto;
+      }
+
+      svg rect.node {
+        fill: #f00;
+        stroke: #fff;
+        stroke-width: 2;
+        cursor: pointer;
+      }
+
+      svg rect.node.hovering {
+        stroke: #09f;
+      }
+
+      svg rect.node.selected {
+        fill: black;
+        stroke: #0f0;
+      }
+
+      svg text {
+        pointer-events: none;
+      }
+
+      svg .rect-select {
+        fill: rgba( 0, 128, 255, 0.4);
+        stroke-width: 1;
+        stroke: #09f;
+      }
+    </style>
+  </head>
+
+  <body class="layout vertical">
+    <h1>Window 1</h1>
+    <div class="layout horizontal flex-1">
+      <div class="box flex-1 left"></div>
+      <span style="width: 5px"></span>
+      <div class="box flex-1 right layout vertical">
+        <svg id="svg" class="flex-1"></svg>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="app://svg.min.js"></script>
+    <script>
+      'use strict';
+
+      const list = [
+        'extrajudicially',
+        'duse',
+        'appleton',
+        'aborning',
+        'evacuee',
+        'impecunious',
+        'overrude',
+        'subrange',
+        'hamlet',
+        'subtranslucency',
+      ];
+
+      let leftEL = document.querySelector('.left');
+      let rightEL = document.querySelector('.right');
+      let index = 0;
+
+      list.forEach(item => {
+        let el = document.createElement('div');
+        el.classList = ['item']
+        el.innerText = item;
+        el.index = index;
+        el.addEventListener('mouseenter', () => {
+          Editor.Selection.hover( 'normal', `${el.index}` );
+        });
+        el.addEventListener('mouseleave', () => {
+          Editor.Selection.hover( 'normal', null );
+        });
+        el.addEventListener('mousedown', event => {
+          event.stopPropagation();
+
+          if (event.metaKey || event.ctrlKey) {
+            let selected = el.classList.contains('selected');
+            if ( selected ) {
+              Editor.Selection.unselect('normal', `${el.index}`, true);
+            } else {
+              Editor.Selection.select('normal', `${el.index}`, false, true);
+            }
+          } else {
+            Editor.Selection.select('normal', `${el.index}`, true, true);
+          }
+        });
+
+        leftEL.appendChild(el);
+        ++index;
+      });
+
+      // =================
+      // SVG
+      // =================
+
+      let rectNodes = [];
+
+      setTimeout(() => {
+        let svgEL = document.querySelector('#svg');
+        let svg = SVG(svgEL);
+
+        let scene = svg.group();
+        let foreground = svg.group();
+        let rect = rightEL.getBoundingClientRect();
+        let index = 0;
+
+        list.forEach(name => {
+          let x = Editor.Math.randomRange(100, rect.width - 100);
+          let y = Editor.Math.randomRange(100, rect.height - 100);
+          let node = scene.group();
+          let rectNode = node.rect(15, 15)
+            .move(-5, 0)
+            .translate(x, y)
+            .addClass('node')
+            ;
+          rectNode.selectable = true;
+          rectNode.index = index;
+
+          rectNode.on('mouseenter', function () {
+            rectNode.addClass('hovering');
+            Editor.Selection.hover('normal', `${rectNode.index}`);
+          });
+
+          rectNode.on('mouseleave', function () {
+            Editor.Selection.hover('normal', null);
+          });
+
+          node
+            .plain(name)
+            .font({
+              size: 15,
+              anchor: 'middle',
+            })
+            .fill({
+              color: '#999'
+            })
+            .translate(x, y - 5);
+
+          rectNodes.push(rectNode);
+          ++index;
+        });
+      }, 100);
+
+      // =================
+      // IPC
+      // =================
+
+      let ipc = new Editor.IpcListener();
+
+      ipc.on('selection:hoverin', ( event, type, id ) => {
+        leftEL.children[id].classList.add('hovering');
+        rectNodes[id].addClass('hovering');
+      });
+      ipc.on('selection:hoverout', ( event, type, id ) => {
+        leftEL.children[id].classList.remove('hovering');
+        rectNodes[id].removeClass('hovering');
+      });
+      ipc.on('selection:changed', ( event, type ) => {
+        for ( let i = 0; i < leftEL.children.length; ++i ) {
+          leftEL.children[i].classList.remove('selected');
+          rectNodes[i].removeClass('selected');
+        }
+
+        let selection = Editor.Selection.curSelection(type);
+        selection.forEach(id => {
+          leftEL.children[id].classList.add('selected');
+          rectNodes[id].addClass('selected');
+        });
+      });
+    </script>
+  </body>
+</html>
