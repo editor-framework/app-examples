@@ -49,4 +49,8 @@ Editor.App.extend({
 
     cb ();
   },
+
+  run () {
+    Editor._quit();
+  },
 });
