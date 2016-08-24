@@ -4,7 +4,7 @@
   "description": "Editor Framework App Examples",
   "author": "Johnny Wu",
   "dependencies": {
-    "electron-prebuilt": "1.x",
+    "electron": "1.x",
     "editor-Framework": "0.x"
   }
 }

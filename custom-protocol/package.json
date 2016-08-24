@@ -1,0 +1,8 @@
+{
+  "name": "custom-protocol",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "sharp": ""
+  }
+}
