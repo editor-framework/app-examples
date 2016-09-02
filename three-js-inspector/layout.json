@@ -1,23 +1,21 @@
 {
-  "type": "dock",
-  "no-collpase": true,
-  "row": true,
-  "docks": [
+  "type": "dock-h",
+  "children": [
     {
-      "active": 0,
       "type": "panel",
       "width": 300,
       "min-width": 240,
-      "panels": [
+      "active": 0,
+      "children": [
         "inspector"
       ]
     },
     {
-      "active": 0,
       "type": "panel",
       "width": 300,
       "min-width": 240,
-      "panels": [
+      "active": 0,
+      "children": [
         "scene"
       ]
     }
