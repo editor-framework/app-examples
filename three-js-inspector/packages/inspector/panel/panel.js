@@ -69,7 +69,12 @@ Editor.Panel.extend({
         }
 
         parent.appendChild(el);
-        this.evaluate( el._childWrapper, indent + 1, p.name, p.value );
+
+        let childWrapper = document.createElement('div');
+        childWrapper.classList.add('child');
+        el.appendChild(childWrapper);
+
+        this.evaluate( childWrapper, indent + 1, p.name, p.value );
       } else if ( p.type === 'enum' ) {
         el = new Editor.UI.Prop(
           displayName, p.value, p.type, p.attrs, indent

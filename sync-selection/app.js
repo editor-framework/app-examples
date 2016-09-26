@@ -19,7 +19,6 @@ Editor.App.extend({
       show:      false,
       resizable: true,
     });
-    win1.restorePositionAndSize();
     win1.load('app://win1.html');
     win1.show();
 
@@ -30,7 +29,6 @@ Editor.App.extend({
       show:      false,
       resizable: true,
     });
-    win2.restorePositionAndSize();
     win2.load('app://win2.html');
     win2.show();
 

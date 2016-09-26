@@ -56,7 +56,7 @@ Editor.App.extend({
   },
 
   run () {
-    let main = new Editor.Window('main', {
+    Editor.run('app://index.html', {
       title:     'Custom Undo',
       width:     400,
       height:    600,
@@ -65,12 +65,5 @@ Editor.App.extend({
       show:      false,
       resizable: true,
     });
-    main.restorePositionAndSize();
-    main.load('app://index.html');
-    main.show();
-
-    //
-    Editor.Window.main = main;
-    main.focus();
   },
 });

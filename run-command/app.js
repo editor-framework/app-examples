@@ -30,7 +30,7 @@ Editor.App.extend({
       });
     });
 
-    let main = new Editor.Window('main', {
+    Editor.run('app://index.html', {
       title:     'Run Command',
       width:     400,
       height:    600,
@@ -39,12 +39,5 @@ Editor.App.extend({
       show:      false,
       resizable: true,
     });
-    main.restorePositionAndSize();
-    main.load('app://index.html');
-    main.show();
-
-    //
-    Editor.Window.main = main;
-    main.focus();
   },
 });

@@ -35,7 +35,7 @@ Editor.App.extend({
      *   - the name of the window ('main' in this case)
      *   - An object defining the parameters of the window
      */
-    let mainWin = new Editor.Window('main', {
+    Editor.run('app://index.html', {
       title: 'Editor Framework Basic Example',
       width: 900,
       height: 700,
@@ -44,28 +44,6 @@ Editor.App.extend({
       show: false,
       resizable: true,
     });
-
-    // Tell Editor that that is our root window.
-    Editor.Window.main = mainWin;
-
-    // restore window size and position
-    mainWin.restorePositionAndSize();
-
-    // page-level test case
-    mainWin.load( 'app://index.html' );
-
-    // load and show main window
-    mainWin.show();
-
-    // open dev tools if needed
-    if ( Editor.argv.showDevtools ) {
-      // NOTE: open dev-tools before did-finish-load will make it insert an unused <style> in page-level
-      mainWin.nativeWin.webContents.once('did-finish-load', function () {
-        mainWin.openDevTools();
-      });
-    }
-
-    mainWin.focus();
 
     Editor.success('main.js: call to run() completed successfully');
   },
