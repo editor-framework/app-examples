@@ -3,18 +3,88 @@
   "version": "1.0.0",
   "description": "Simple Package",
   "main": "main.js",
+  "main-menu": {
+    "Layout/Custom/default": {
+      "message": "simple:layout",
+      "params": ["default"]
+    },
+    "Layout/Custom/row": {
+      "message": "simple:layout",
+      "params": ["row"]
+    },
+    "Layout/Custom/column": {
+      "message": "simple:layout",
+      "params": ["column"]
+    },
+    "Layout/Custom/demo": {
+      "message": "simple:layout",
+      "params": ["demo"]
+    }
+  },
   "panel.01": {
     "main": "panel/panel.js",
     "type": "dockable",
-    "title": "Simple 01",
-    "width": 400,
-    "height": 300
+    "title": "Simple 01"
   },
   "panel.02": {
     "main": "panel/panel.js",
     "type": "dockable",
     "title": "Simple 02",
-    "width": 400,
+    "width": 300,
     "height": 300
+  },
+  "panel.03": {
+    "main": "panel/panel.js",
+    "type": "dockable",
+    "title": "Simple 03",
+    "width": 300,
+    "height": 300,
+    "min-width": 300,
+    "min-height": 300
+  },
+  "panel.hierarchy": {
+    "main": "panel/panel.js",
+    "type": "dockable",
+    "title": "Hierarchy",
+    "width": 240,
+    "height": 300,
+    "min-width": 200,
+    "min-height": 200
+  },
+  "panel.assets": {
+    "main": "panel/panel.js",
+    "type": "dockable",
+    "title": "Assets",
+    "width": 240,
+    "height": 300,
+    "min-width": 200,
+    "min-height": 200
+  },
+  "panel.inspector": {
+    "main": "panel/panel.js",
+    "type": "dockable",
+    "title": "Inspector",
+    "width": 300,
+    "height": "auto",
+    "min-width": 200,
+    "min-height": 200
+  },
+  "panel.scene": {
+    "main": "panel/panel.js",
+    "type": "dockable",
+    "title": "Scene",
+    "width": "auto",
+    "height": "auto",
+    "min-width": 200,
+    "min-height": 200
+  },
+  "panel.console": {
+    "main": "panel/panel.js",
+    "type": "dockable",
+    "title": "Console",
+    "width": "auto",
+    "height": "300",
+    "min-width": 200,
+    "min-height": 200
   }
 }

@@ -1,0 +1,50 @@
+{
+  "type": "dock-h",
+  "children": [
+    {
+      "type": "dock-v",
+      "children": [
+        {
+          "type": "panel",
+          "active": 0,
+          "children": [
+            "simple.hierarchy"
+          ]
+        },
+        {
+          "type": "panel",
+          "active": 0,
+          "children": [
+            "simple.assets"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "active": 0,
+      "children": [
+        "simple.inspector"
+      ]
+    },
+    {
+      "type": "dock-v",
+      "children": [
+        {
+          "type": "panel",
+          "active": 0,
+          "children": [
+            "simple.scene"
+          ]
+        },
+        {
+          "type": "panel",
+          "active": 0,
+          "children": [
+            "simple.console"
+          ]
+        }
+      ]
+    }
+  ]
+}

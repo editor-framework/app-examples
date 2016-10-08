@@ -2,15 +2,37 @@
 
 Editor.Panel.extend({
   style: `
-    h1 {
-      color: #09f;
+    :host {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #size {
+      white-space: nowrap;
     }
   `,
 
   template: `
-    <h1>This is a simple panel</h1>
+    <div id="size"></div>
   `,
 
-  listeners: {
+  $: {
+    size: '#size',
   },
+
+  ready () {
+    this._updateSize();
+  },
+
+  listeners: {
+    'panel-resize' () {
+      this._updateSize();
+    }
+  },
+
+  _updateSize () {
+    this.$size.innerText = `${this.offsetWidth} X ${this.offsetHeight}`;
+  }
 });

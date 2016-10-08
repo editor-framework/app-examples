@@ -1,0 +1,31 @@
+{
+  "type": "dock-v",
+  "children": [
+    {
+      "type": "dock-h",
+      "children": [
+        {
+          "type": "panel",
+          "active": 0,
+          "children": [
+            "simple.01"
+          ]
+        },
+        {
+          "type": "panel",
+          "active": 0,
+          "children": [
+            "simple.02"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "active": 0,
+      "children": [
+        "simple.03"
+      ]
+    }
+  ]
+}
