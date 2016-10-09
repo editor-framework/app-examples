@@ -46,25 +46,25 @@
     "main": "panel/panel.js",
     "type": "dockable",
     "title": "Hierarchy",
-    "width": 240,
+    "width": 150,
     "height": 300,
-    "min-width": 200,
+    "min-width": 100,
     "min-height": 200
   },
   "panel.assets": {
     "main": "panel/panel.js",
     "type": "dockable",
     "title": "Assets",
-    "width": 240,
+    "width": 150,
     "height": 300,
-    "min-width": 200,
+    "min-width": 100,
     "min-height": 200
   },
   "panel.inspector": {
     "main": "panel/panel.js",
     "type": "dockable",
     "title": "Inspector",
-    "width": 300,
+    "width": 200,
     "height": "auto",
     "min-width": 200,
     "min-height": 200
@@ -83,7 +83,7 @@
     "type": "dockable",
     "title": "Console",
     "width": "auto",
-    "height": "300",
+    "height": "240",
     "min-width": 200,
     "min-height": 200
   }
