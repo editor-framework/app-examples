@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <style>
+      body {
+        margin: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Dashboard</h1>
+    <ui-button id="scene">Scene Editor</ui-button>
+    <ui-button id="particle">Particle Editor</ui-button>
+  </body>
+
+  <script>
+    let btn1 = document.getElementById('scene');
+    btn1.addEventListener('confirm', () => {
+      Editor.Ipc.sendToMain('dashboard:open', 'scene-editor');
+    });
+
+    let btn2 = document.getElementById('particle');
+    btn2.addEventListener('confirm', () => {
+      Editor.Ipc.sendToMain('dashboard:open', 'particle-editor');
+    });
+  </script>
+</html>
