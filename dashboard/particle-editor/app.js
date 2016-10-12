@@ -19,14 +19,10 @@ Editor.App.extend({
       resizable: false,
     });
 
-    let mainWin = Editor.Window.main;
-    mainWin.nativeWin.on('close', event => {
-      event.preventDefault();
-
+    Electron.app.on('quit', () => {
       Electron.app.relaunch({
-        args: [ `./example-apps/dashboard/`]
+        args: [`./example-apps/dashboard/`]
       });
-      Electron.app.exit(0);
     });
 
     Editor.log('Particle Editor Ready!');
