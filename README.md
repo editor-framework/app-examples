@@ -5,7 +5,7 @@
 Under your `editor-framework` folder run:
 
 ```
-git clone https://github.com/editor-framework/example-apps
+git clone https://github.com/editor-framework/app-examples
 ```
 
 ## Usage
@@ -13,5 +13,5 @@ git clone https://github.com/editor-framework/example-apps
 In your `editor-framework` folder run:
 
 ```
-npm start example-apps/${name}
+npm start app-examples/${name}
 ```
