@@ -23,7 +23,7 @@ Editor.App.extend({
       'package-search-path': [
         'app://package-doesnt-exist/'
       ]
-      // An object defining application-level configuration options for initialization will go here  
+      // An object defining application-level configuration options for initialization will go here
     });
 
 

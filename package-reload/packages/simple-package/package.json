@@ -4,7 +4,7 @@
   "description": "Simple Package",
   "main": "main.js",
   "main-menu": {
-    "Examples/Simple Package": {
+    "Panel/Simple Panel": {
       "message": "simple-package:open"
     }
   },
@@ -12,10 +12,8 @@
     "main": "panel/panel.js",
     "type": "dockable",
     "title": "Simple Package",
-    "width": 600,
-    "min-width": 500,
-    "height": 220,
-    "min-height": 220
+    "width": 400,
+    "height": 300
   },
   "reload": {
     "ignore" : [ "README.md" ],

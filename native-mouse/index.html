@@ -1,0 +1,65 @@
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <style>
+    body {
+      margin: 10px;
+    }
+
+    #border {
+      border: 1px solid #666;
+    }
+
+    #info {
+      border: 1px solid #666;
+      background: #171717;
+
+      position: absolute;
+      top: 5px;
+      left: 5px;
+
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="border" class="fit"></div>
+  <div id="info">
+    <div id="pos">Mouse Position: ???</div>
+    <div id="wheel">Mouse Wheel: ???</div>
+  </div>
+</body>
+
+<script>
+  let borderEL = document.getElementById('border');
+  let posEL = document.getElementById('pos');
+  let wheelEL = document.getElementById('wheel');
+
+  borderEL.addEventListener('mousedown', event => {
+    Editor.UI.startDrag(
+      'crosshair',
+
+      event,
+
+      // move
+      (event, dx, dy, offsetx, offsety) => {
+        posEL.innerText = `Mouse Position: ${offsetx}, ${offsety}`;
+      },
+
+      // end
+      (event, dx, dy, offsetx, offsety) => {
+        posEL.innerText = `Mouse Position: ???`;
+        wheelEL.innerText = `Mouse Wheel: ???`;
+      },
+
+      // wheel
+      event => {
+        wheelEL.innerText = `Mouse Wheel: ${event.deltaY}`;
+      }
+    );
+  });
+</script>
+
+</html>
