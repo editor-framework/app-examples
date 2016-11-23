@@ -4,14 +4,14 @@
   "description": "Simple Package",
   "main": "main.js",
   "main-menu": {
-    "Examples/i18n:simple-package.title": {
+    "Examples/Simple Package": {
       "message": "simple-package:open"
     }
   },
   "panel": {
     "main": "panel/panel.js",
     "type": "dockable",
-    "title": "i18n:simple-package.title",
+    "title": "Simple Package",
     "width": 600,
     "min-width": 500,
     "height": 220,
