@@ -1,5 +1,5 @@
 {
-  "name": "reload-packages-rules",
+  "name": "package-reload",
   "version": "0.0.1",
   "description": "Basic app has a package with reload configs",
   "dependencies": {},

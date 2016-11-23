@@ -21,6 +21,6 @@
     "ignore" : [ "README.md" ],
     "test" : [],
     "renderer" : [ "panel/**/*", "!panel/**/*.css"],
-    "main" : [ "main.js", "package.json",  "i18n/**/*" ]
+    "main" : [ "main.js", "package.json" ]
   }
 }
