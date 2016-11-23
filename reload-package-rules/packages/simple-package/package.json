@@ -1,0 +1,26 @@
+{
+  "name": "simple-package",
+  "version": "1.0.0",
+  "description": "Simple Package",
+  "main": "main.js",
+  "main-menu": {
+    "Examples/i18n:simple-package.title": {
+      "message": "simple-package:open"
+    }
+  },
+  "panel": {
+    "main": "panel/panel.js",
+    "type": "dockable",
+    "title": "i18n:simple-package.title",
+    "width": 600,
+    "min-width": 500,
+    "height": 220,
+    "min-height": 220
+  },
+  "reload": {
+    "ignore" : [ "README.md" ],
+    "test" : [],
+    "renderer" : [ "panel/**/*", "!panel/**/*.css"],
+    "main" : [ "main.js", "package.json",  "i18n/**/*" ]
+  }
+}

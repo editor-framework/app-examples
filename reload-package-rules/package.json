@@ -1,0 +1,7 @@
+{
+  "name": "reload-packages-rules",
+  "version": "0.0.1",
+  "description": "Basic app has a package with reload configs",
+  "dependencies": {},
+  "main": "app.js"
+}
