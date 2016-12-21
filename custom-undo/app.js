@@ -65,5 +65,11 @@ Editor.App.extend({
       show:      false,
       resizable: true,
     });
+
+    Editor.Window.main.nativeWin.webContents.on('before-input-event', (event, input) => {
+      // NOTE: uncomment this to make the undo/redo work in Windows platform
+      // event.preventDefault();
+      // console.log(input);
+    });
   },
 });
