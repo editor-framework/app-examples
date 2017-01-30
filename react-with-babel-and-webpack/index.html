@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>Code Editor</title>
+  <meta charset="utf-8">
+
+  <style>
+    #mainDock {
+      position: relative;
+    }
+    h2 {
+      margin: auto;
+    }
+    h2 span {
+      color: #090;
+    }
+    body {
+      margin: 3px;
+    }
+  </style>
+  <script src="app://bower_components/pace/pace.js"></script>
+  <link href="app://bower_components/pace/themes/red/pace-theme-center-simple.css" rel="stylesheet">
+
+  <script type="text/javascript" src="app://bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+  <link rel="import" href="app://bower_components/polymer/polymer.html">
+  <link rel="import" href="app://bower_components/iron-flex-layout/iron-flex-layout.html">
+  <link rel="stylesheet" href="app://bower_components/fontawesome/css/font-awesome.min.css">
+
+
+</head>
+
+<body class="layout vertical">
+
+<ui-main-dock class="flex-1"></ui-main-dock>
+
+<script>
+
+  Pace.once( 'hide', function () {
+    Editor.UI.removeLoadingMask();
+  });
+
+  Editor.UI.addLoadingMask({
+    background: '#333',
+  });
+</script>
+</body>
+</html>

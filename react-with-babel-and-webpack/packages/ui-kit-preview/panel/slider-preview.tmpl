@@ -1,0 +1,39 @@
+<div class="section">
+  <h3>Standard</h3>
+  <div class="group g-01">
+    <ui-slider value="0.5"></ui-slider>
+    <span class="text"></span>
+  </div>
+
+  <div class="group g-02">
+    <ui-slider value="0.5" disabled></ui-slider>
+    <span class="text"></span>
+    <ui-button id="focus" class="blue mini">Focus</ui-button>
+  </div>
+
+  <span id="event">event: ---</span>
+</div>
+
+<div class="section">
+  <h3>State</h3>
+  <div style="position: relative;">
+    <div class="group">
+      <ui-slider style="width: 200px;" value="0.5" focused></ui-slider>
+      <span class="label">Focused</span>
+    </div>
+    <div class="group">
+      <ui-slider style="width: 200px;" value="0.5" disabled></ui-slider>
+      <span class="label">Disabled</span>
+    </div>
+    <div class="fit"></div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Readonly</h3>
+  <div style="position: relative;">
+    <div class="group g-03">
+      <ui-slider style="width: 200px;" value="0.5" readonly></ui-slider>
+    </div>
+  </div>
+</div>
